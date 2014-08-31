@@ -1,18 +1,16 @@
 ======================================================================
-Install MongoDB on Red Hat Enterprise, CentOS, Fedora, or Amazon Linux
+Red Hat Enterprise, CentOS, Fedora, 以及 Amazon Linux 上的安装
 ======================================================================
 
 .. default-domain:: mongodb
 
-Overview
+概述
 --------
 
-Use this tutorial to install MongoDB on Red Hat Enterprise Linux, CentOS
-Linux, Fedora Linux, or a related system. The tutorial uses ``.rpm``
-packages to install. While some of these distributions include their own
-MongoDB packages, the official MongoDB packages are generally more up to
-date.
-
+这个教程可以用来帮你在Red Hat, CentOS, Fedora及类似的Linux系统上安装MongoDB。
+在这个教程里我们会使用  ``.rpm`` 软件包来安装。这些Linux可能会发布自己的MongoDB软件包，
+MongoDB官方的下载一般会是最新版本。
+ 
 .. The following include includes two h2 headers:
 .. Packages and Control Scripts
 
