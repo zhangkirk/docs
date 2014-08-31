@@ -107,6 +107,20 @@ extlinks = {
     'about': ('http://www.mongodb.org/about%s', '')
 }
 
+extlinks = {
+    'issue': ('https://jira.mongodb.org/browse/%s', '' ),
+    'wiki': ('http://www.mongodb.org/display/DOCS/%s', ''),
+    'api': ('http://api.mongodb.org/%s', ''),
+    'source': ('https://github.com/mongodb/mongo/blob/master/%s', ''),
+    'docsgithub' : ( 'http://github.com/tjworks/docs/blob/{0}/%s'.format(conf.git.branches.current), ''),
+    'hardlink' : ( 'http://docs.mongoing.com/{0}/%s'.format(conf.git.branches.current), ''),
+    'manual': ('http://docs.mongodb.org/manual%s', ''),
+    'ecosystem': ('http://docs.mongodb.org/ecosystem%s', ''),
+    'meta-driver': ('http://docs.mongodb.org/meta-driver/latest%s', ''),
+    'mms': ('https://mms.mongodb.com/help%s', ''),
+    'mms-hosted': ('https://mms.mongodb.org/help-hosted%s', ''),
+    'about': ('http://www.mongodb.org/about%s', '')
+}
 ## add `extlinks` for each published version.
 for i in conf.git.branches.published:
     extlinks[i] = ( ''.join([ conf.project.url, '/', i, '%s' ]), '' )
