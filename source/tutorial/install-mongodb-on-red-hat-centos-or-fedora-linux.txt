@@ -27,19 +27,19 @@ MongoDB官方的下载一般会是最新版本。
    the mean time use your own control scripts *or* install using the
    procedure outlined in :doc:`/tutorial/install-mongodb-on-linux`.
 
-Considerations
+注意事项
 --------------
 
-For production deployments, always run MongoDB on 64-bit systems.
+对于生产部署, MongoDB始终运行在64位的系统上.
 
 .. include:: /includes/fact-installation-bind-ip-default-in-config.rst
 
-Install MongoDB
+安装MongoDB
 ---------------
 
 .. include:: /includes/steps/install-mongodb-on-red-hat-centos-or-fedora-linux.rst
 
-Run MongoDB
+运行MongoDB
 -----------
 
 .. important:: You must configure SELinux to allow MongoDB to start on
@@ -52,10 +52,10 @@ Run MongoDB
    - disable SELinux entirely. This requires a system reboot and may have
      larger implications for your deployment.
 
-The MongoDB instance stores its data files in ``/var/lib/mongo``
-and its log files in ``/var/log/mongo``, and runs using the ``mongod``
-user account. If you change the user that runs the MongoDB process, you
-**must** modify the access control rights to the ``/var/lib/mongodb`` and
-``/var/log/mongodb`` directories.
+MongoDB的实例存储在数据文件 ``/var/lib/mongo`` 下
+日志文件存储在 ``/var/log/mongo``, 运行使用 ``mongod``
+用户账户. 如果你改变用户运行的MongoDB进程, 你
+**必须** 修改``/var/lib/mongodb``访问控制权限和
+``/var/log/mongodb`` 目录.
 
 .. include:: /includes/steps/run-mongodb-on-a-linux-distribution.rst
