@@ -98,7 +98,7 @@ new collection or appending data to an existing collection:
 
    }
 
-xx方法接受三个参数
+xx方法接受三个参数:数据库名称,一个新的或者已经存在的集合名称,要插入的文档条目数.上面的函数插入了多条带有"X"字段的记录,且x字段的值是递增的.
 The ``insertData()`` function takes three parameters: a database, a new
 or existing collection, and the number of documents to create.
 The function creates documents with an ``x`` field that is set to an
@@ -110,16 +110,21 @@ incremented integer, as in the following example documents:
    { "_id" : ObjectId("51a4da9b292904caffcff6ec"), "x" : 1 }
    { "_id" : ObjectId("51a4da9b292904caffcff6ed"), "x" : 2 }
 
+将函数存储在xx中,每启动mongo终端会话时,函数都会自动被加载.
 Store the function in your :ref:`.mongorc.js <mongo-mongorc-file>` file.
 The :program:`mongo` shell loads the function for you every time you
 start a session.
 
+
+举例:在xx方法中指定数据库名,集合名与要插入的文档数量.
 .. example:: Specify database name, collection name, and the number of
    documents to insert as arguments to ``insertData()``.
 
    .. code-block:: javascript
 
       insertData("test", "testData", 400)
+      
+   这个操作在xx中插入了四百条数据,如果xx不存在,mongoDB会自动新建.
 
    This operation inserts 400 documents into the ``testData`` collection
    in the ``test`` database. If the collection and database do not
