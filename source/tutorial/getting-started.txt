@@ -1,23 +1,16 @@
 ============================
-Getting Started with MongoDB
+开始使用MongoDB
 ============================
-
 .. default-domain:: mongodb
 
-This tutorial provides an introduction to basic database operations
-using the :program:`mongo` shell. :program:`mongo` is a part of the
-standard MongoDB distribution and provides a full JavaScript
-environment with complete access to the JavaScript language
-and all standard functions as well as a full database interface for
-MongoDB. See the :api:`mongo JavaScript API <js>` documentation and
-the :program:`mongo` shell :doc:`JavaScript Method Reference </reference/method>`.
 
-The tutorial assumes that you're running MongoDB on a Linux or OS X
-operating system and that you have a running database server; MongoDB
-does support Windows and provides a Windows distribution with
-identical operation. For instructions on installing MongoDB and
-starting the database server, see the appropriate :doc:`installation
-</installation>` document.
+本教程介绍了基本的数据库操作
+使用:项目:mongo shell。:计划:“mongo”的一部分
+标准MongoDB分布和提供了一个完整的JavaScript
+环境完全访问JavaScript语言
+和所有标准功能以及一个完整的数据库接口
+MongoDB。看到:api:< js > mongo JavaScript api的文档和
+:项目:“mongo”壳:医生:“JavaScript方法引用< /引用/方法>”。
 
 Connect to a Database
 ---------------------
