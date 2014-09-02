@@ -1,53 +1,48 @@
-title: Start MongoDB.
+title: 启动 MongoDB
 stepnum: 1
 ref: start-mdb
 action:
   pre: |
-    You can start the :program:`mongod` process by issuing the following
-    command:
+    你可以用以下命令启动 :program:`mongod` 进程:
   language: sh
   code: |
     sudo service mongod start
 ---
-title: Verify that MongoDB has started successfully
+title: 验证MongoDB已经启动
 stepnum: 2
 ref: verify
 pre: |
-  You can verify that the :program:`mongod` process has started
-  successfully by checking the contents of the log file at
-  ``/var/log/mongodb/mongod.log``.
+  你可以通过检查文件``/var/log/mongodb/mongod.log``的内容
+  来确认 :program:`mongod` 进程已经成功启动。
 action:
   pre: |
-    You can optionally ensure that MongoDB will start following a system
-    reboot by issuing the following command:
+    你可以用以下命令使MongoDB在机器重新启动后自动启动:
   language: sh
   code: |
     sudo chkconfig mongod on
 ---
-title: Stop MongoDB.
+title: 停止 MongoDB
 stepnum: 3
 ref: stop-mdb
 action:
   pre: |
-    As needed, you can stop the :program:`mongod` process by issuing the
-    following command:
+    你可以用以下命令停止 :program:`mongod` 进程:
   language: sh
   code: |
     sudo service mongod stop
 ---
-title: Restart MongoDB.
+title: 重新启动 MongoDB
 stepnum: 4
 ref: restart-mdb
 action:
   pre: |
-    You can restart the :program:`mongod` process by issuing the following
-    command:
+    你可以用以下命令重新启动 :program:`mongod` 进程:
   language: sh
   code: |
     sudo service mongod restart
 post: |
-  You can follow the state of the process for errors or important messages
-  by watching the output in the ``/var/log/mongo/mongod.log`` file.
+  你可以通过观看日志文件 ``/var/log/mongo/mongod.log`` 来了解MongoDB的运行情况，
+  如错误报告或其他重要消息。
 ---
 stepnum: 5
 source:
