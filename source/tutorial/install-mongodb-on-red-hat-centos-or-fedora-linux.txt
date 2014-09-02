@@ -8,8 +8,8 @@ Red Hat Enterprise, CentOS, Fedora, 以及 Amazon Linux 上的安装
 --------
 
 这个教程可以用来帮你在Red Hat, CentOS, Fedora及类似的Linux系统上安装MongoDB。
-在这个教程里我们会使用  ``.rpm`` 软件包来安装。这些Linux可能会发布自己的MongoDB软件包，
-MongoDB官方的下载一般会是最新版本。
+在这个教程里我们会使用  ``.rpm`` 软件包来安装。注意这些不同的Linux可能会发布自己的MongoDB软件包，
+不过我们建议MongoDB官方的下载因为官方的一般会是最新版本。
  
 .. The following include includes two h2 headers:
 .. Packages and Control Scripts
@@ -20,17 +20,14 @@ MongoDB官方的下载一般会是最新版本。
 
 .. warning::
 
-   With the introduction of ``systemd`` in Fedora 15, the control scripts
-   included in the packages available in the MongoDB downloads repository
-   are not compatible with Fedora systems. A correction is
-   forthcoming, see :issue:`SERVER-7285` for more information, and in
-   the mean time use your own control scripts *or* install using the
-   procedure outlined in :doc:`/tutorial/install-mongodb-on-linux`.
+   Fedora 15 引入了 ``systemd`` 功能, 由此引起的是MongoDB官方包里自带的启动脚本
+   会无法在Fedora系统上正确运行。这个问题有望在未来版本解决， 详见 :issue:`SERVER-7285`。 
+   在次之前你可以使用你自己的启动脚本 *或者* 使用一种通用Linux安装方式，详见 :doc:`/tutorial/install-mongodb-on-linux`。
 
 注意事项
 --------------
 
-对于生产部署, MongoDB始终运行在64位的系统上.
+在生产环境下, MongoDB应该运行在64位的系统上。
 
 .. include:: /includes/fact-installation-bind-ip-default-in-config.rst
 
@@ -42,20 +39,16 @@ MongoDB官方的下载一般会是最新版本。
 运行MongoDB
 -----------
 
-.. important:: You must configure SELinux to allow MongoDB to start on
-   Fedora systems. Administrators have two options:
+.. important:: 在Fedora系统上你需要配置一下SELinux来运行MongoDB。可以采取一下两种方式之一:
 
-   - enable access to the relevant ports (e.g. 27017) for SELinux. See
-     :ref:`security-port-numbers` for more information on MongoDB's
-     :doc:`default ports </reference/default-mongodb-port>`.
+   - 在SELinux里开启相关端口 (如 27017) 。关于MongoDB的常用端口 :doc:`default ports </reference/default-mongodb-port>`， 请参见 :ref:`security-port-numbers` 。
 
-   - disable SELinux entirely. This requires a system reboot and may have
-     larger implications for your deployment.
+   - 禁止使用SELinux。注意这个需要重新启动机器并由可能影响到系统上的其他程序。
 
-MongoDB的实例存储在数据文件 ``/var/lib/mongo`` 下
-日志文件存储在 ``/var/log/mongo``, 运行使用 ``mongod``
-用户账户. 如果你改变用户运行的MongoDB进程, 你
-**必须** 修改``/var/lib/mongodb``访问控制权限和
-``/var/log/mongodb`` 目录.
+MongoDB实例的数据文件存储在 ``/var/lib/mongo`` 目录下，
+日志文件存储在 ``/var/log/mongo`` 目录下, 运行则使用 ``mongod``
+用户账户。 如果你改变用户运行的MongoDB进程, 你
+**必须** 修改 ``/var/lib/mongodb`` 和
+``/var/log/mongodb`` 目录的访问控制权限。
 
 .. include:: /includes/steps/run-mongodb-on-a-linux-distribution.rst
