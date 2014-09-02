@@ -1,8 +1,9 @@
-title: 配置包管理系统 (YUM).
+title: 配置YUM
 stepnum: 1
 ref: config-yum
 pre: |
   新建一个MongoDB安装包的配置文件 ``/etc/yum.repos.d/mongodb.repo`` 并复制以下配置信息:
+  
 action:
   - pre: |
       如果你是在64位系统上，复制下述信息：
@@ -23,7 +24,7 @@ action:
       gpgcheck=0
       enabled=1
 ---
-title: 安装MongoDB以及相关的工具
+title: 安装MongoDB及工具
 stepnum: 2
 ref: install
 pre: |
