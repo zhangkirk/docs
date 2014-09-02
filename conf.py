@@ -106,7 +106,6 @@ extlinks = {
     'mms-hosted': ('https://mms.mongodb.org/help-hosted%s', ''),
     'about': ('http://www.mongodb.org/about%s', '')
 }
-
 extlinks = {
     'issue': ('https://jira.mongodb.org/browse/%s', '' ),
     'wiki': ('http://www.mongodb.org/display/DOCS/%s', ''),

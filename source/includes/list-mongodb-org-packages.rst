@@ -1,48 +1,43 @@
-Packages
---------
+MongoDB安装包
+-------------
 
-MongoDB provides packages of the officially supported MongoDB builds in
-it's own repository. This repository provides the MongoDB distribution
-in the following packages:
+MongoDB提供官方的MongoDB软件仓库(repository)供Linux的软件管理工具使用。以下是
+MongoDB提供的安装包： 
 
 - ``mongodb-org``
 
-  This package is a ``metapackage`` that will automatically install
-  the four component packages listed below.
+  这个是个超级安装包，包括下述所有的子模块。
 
 - ``mongodb-org-server``
 
-  This package contains the :program:`mongod` daemon and associated
-  configuration and init scripts.
+  这个包括MongoDB的核心数据库程序 :program:`mongod` 以及相关的配置文件和启动脚本。
 
 - ``mongodb-org-mongos``
 
-  This package contains the :program:`mongos` daemon.
+  这个是分片集群中用到的路由器 :program:`mongos` 程序.
 
 - ``mongodb-org-shell``
 
-  This package contains the :program:`mongo` shell.
+  这个是MongoDB的命令行客户端 :program:`mongo` shell.
 
 - ``mongodb-org-tools``
 
-  This package contains the following MongoDB tools: :program:`mongoimport`
+  这个包含下列MongoDB的工具: :program:`mongoimport`
   :program:`bsondump`, :program:`mongodump`, :program:`mongoexport`,
   :program:`mongofiles`, :program:`mongoimport`, :program:`mongooplog`,
   :program:`mongoperf`, :program:`mongorestore`, :program:`mongostat`,
-  and :program:`mongotop`.
+  :program:`mongotop`。
 
-Control Scripts
+控制脚本
 ---------------
 
-The ``mongodb-org`` package includes various :term:`control scripts
-<control script>`, including the init script |init-script-path|.
+``mongodb-org`` 安装包里有许多 :term:`控制脚本
+<control script>`, 如启动脚本 |init-script-path| 等。
 
-The package configures MongoDB using the ``/etc/mongod.conf`` file in
-conjunction with the control scripts. See
-:doc:`/reference/configuration-options` for documentation of the
-configuration file.
+这个安装包的配置文件是 ``/etc/mongod.conf`` 。 关于配置文件详情请参见
+:doc:`/reference/configuration-options` 。
 
-As of version |release|, there are no control scripts for
-:program:`mongos`. The :program:`mongos` process is used only in
-:doc:`sharding </core/sharding>`. You can use the ``mongod`` init script
-to derive your own :program:`mongos` control script.
+目前为止（版本 |release| ）尚没有官方的 :program:`mongos` 的控制脚本。 
+ :program:`mongos` 路由器进程仅需在 :doc:`sharding </core/sharding>` 的情景下使用。
+ 你可以参考 ``mongod`` 的启动脚本来写一个你自己的 :program:`mongos` 启动脚本。
+

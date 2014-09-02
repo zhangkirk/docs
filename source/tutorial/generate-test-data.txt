@@ -1,18 +1,18 @@
 ==================
-Generate Test Data
+如何生成测试数据
 ==================
 
 .. default-domain:: mongodb
 
-This tutorial describes how to quickly generate test data as you need
-to test basic MongoDB operations.
+这篇教程讲述了如何按照你的需要快速生成测试数据用来测试MongoDB基本操作的方法.
 
-Insert Multiple Documents Using a For Loop
+使用For循环插入多条数据
 ------------------------------------------
-
+你可以在 终端中,使用Javascript的``for``循环,向一个新的或者已经存在的的集合中添加多条数据.
 You can add documents to a new or existing collection by using a JavaScript
 ``for`` loop run from the :program:`mongo` shell.
 
+1.在 终端中,按照如下所示,使用for 循环在 集合插入新的数据,如果 集合不存在,MongoDB会自动新建.
 1. From the :program:`mongo` shell, insert new documents into the
    ``testData`` collection using the following ``for`` loop. If the
    ``testData`` collection does not exist, MongoDB creates the
@@ -23,10 +23,13 @@ You can add documents to a new or existing collection by using a JavaScript
       for (var i = 1; i <= 25; i++) db.testData.insert( { x : i } )
 
 #. Use find() to query the collection:
+#. 使用find()在集合中查找.
 
    .. code-block:: javascript
 
       db.testData.find()
+      
+   mongo终端程序显示了集合中前20条记录,每条记录的是不同的.
 
    The :program:`mongo` shell displays the first 20 documents in the
    collection. Your :doc:`ObjectId </reference/object-id>` values will be
@@ -57,6 +60,8 @@ You can add documents to a new or existing collection by using a JavaScript
 
 .. _getting-started-cursor-exhaustion:
 
+# x方法返回的是一个游标,在mongodb的终端中,使用it可以遍历游标并返回更多的文档,mongo终端将会穷尽遍历游标,并返回剩下的数据.
+
 #. The :method:`~db.collection.find()` returns a cursor. To iterate
    the cursor and return more documents use the ``it`` operation in
    the :program:`mongo` shell. The :program:`mongo` shell will exhaust
@@ -70,9 +75,10 @@ You can add documents to a new or existing collection by using a JavaScript
       { "_id" : ObjectId("51a7dce92cacf40b79990bff"), "x" : 24 }
       { "_id" : ObjectId("51a7dce92cacf40b79990c00"), "x" : 25 }
 
+使用mongo的shell 函数插入多条数据.
 Insert Multiple Documents with a ``mongo`` Shell Function
 ---------------------------------------------------------
-
+在mongo终端会话中,你可以创建一个Javascript方法来生成之前的数据,使用x方法在一个新的集合或者已经存在的集合中插入数据以供测试.
 You can create a JavaScript function in your shell session to generate
 the above data. The ``insertData()`` JavaScript function, shown here,
 creates new data for use in testing or training by either creating a
@@ -92,6 +98,7 @@ new collection or appending data to an existing collection:
 
    }
 
+xx方法接受三个参数:数据库名称,一个新的或者已经存在的集合名称,要插入的文档条目数.上面的函数插入了多条带有"X"字段的记录,且x字段的值是递增的.
 The ``insertData()`` function takes three parameters: a database, a new
 or existing collection, and the number of documents to create.
 The function creates documents with an ``x`` field that is set to an
@@ -103,16 +110,21 @@ incremented integer, as in the following example documents:
    { "_id" : ObjectId("51a4da9b292904caffcff6ec"), "x" : 1 }
    { "_id" : ObjectId("51a4da9b292904caffcff6ed"), "x" : 2 }
 
+将函数存储在xx中,每启动mongo终端会话时,函数都会自动被加载.
 Store the function in your :ref:`.mongorc.js <mongo-mongorc-file>` file.
 The :program:`mongo` shell loads the function for you every time you
 start a session.
 
+
+举例:在xx方法中指定数据库名,集合名与要插入的文档数量.
 .. example:: Specify database name, collection name, and the number of
    documents to insert as arguments to ``insertData()``.
 
    .. code-block:: javascript
 
       insertData("test", "testData", 400)
+      
+   这个操作在xx中插入了四百条数据,如果xx不存在,mongoDB会自动新建.
 
    This operation inserts 400 documents into the ``testData`` collection
    in the ``test`` database. If the collection and database do not
