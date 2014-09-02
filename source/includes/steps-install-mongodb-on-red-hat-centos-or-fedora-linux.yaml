@@ -1,12 +1,11 @@
-title: Configure the package management system (YUM).
+title: 配置包管理系统 (YUM).
 stepnum: 1
 ref: config-yum
 pre: |
-  Create a ``/etc/yum.repos.d/mongodb.repo`` file to hold the
-  following configuration information for the MongoDB repository:
+  新建一个MongoDB安装包的配置文件 ``/etc/yum.repos.d/mongodb.repo`` 并复制以下配置信息:
 action:
   - pre: |
-      If you are running a 64-bit system, use the following configuration:
+      如果你是在64位系统上，复制下述信息：
     language: cfg
     code: |
       [mongodb]
@@ -15,8 +14,7 @@ action:
       gpgcheck=0
       enabled=1
   - pre: |
-      If you are running a 32-bit system, which is not recommended for
-      production deployments, use the following configuration:
+      如果你的系统是32位（生产环境下不建议使用），复制下述信息:
     language: cfg
     code: |
       [mongodb]
@@ -25,37 +23,31 @@ action:
       gpgcheck=0
       enabled=1
 ---
-title: Install the MongoDB packages and associated tools.
+title: 安装MongoDB以及相关的工具
 stepnum: 2
 ref: install
 pre: |
-  When you install the packages, you choose whether to install the current
-  release or a previous one. This step provides the commands for both.
+  安装MongoDB时候可以选择安装最新版本或者是某一个指定旧版本
 action:
   - pre: |
-      To install the latest stable version of MongoDB, issue the following
-      command:
+      使用下述命令假如你希望安装最新版本:
     language: sh
     code: |
       sudo yum install mongodb-org
   - pre: |
-      To install a specific release of MongoDB, specify each
-      component package individually and append the version number to the
-      package name, as in the following example that installs the `2.6.1``
-      release of MongoDB:
+      若要安装某一个指定的版本， 可以安装单个MongoDB安装模块并在安装模块名后面加上版本号。
+      如下述例子会安装MongoDB的 ``2.6.1`` 版本:
+      
     language: sh
     code: |
       sudo yum install mongodb-org-2.6.1 mongodb-org-server-2.6.1 mongodb-org-shell-2.6.1 mongodb-org-mongos-2.6.1 mongodb-org-tools-2.6.1
   - pre: |
-      You can specify any available version of MongoDB. However ``yum``
-      will upgrade the packages when a newer version becomes available. To
-      prevent unintended upgrades, pin the package. To pin a package, add
-      the following ``exclude`` directive to your ``/etc/yum.conf`` file:
+      你可以指定任意有效的MongoDB版本号。注意 ``yum`` 工具可能会自动更新到新版本的MongoDB。
+      如果你不希望自动更新版本，你可以把MongoDB从 ``yum`` 的配置文件 ``/etc/yum.conf`` 里
+      排除出来，如下：
     language: ini
     code: |
       exclude=mongodb-org,mongodb-org-server,mongodb-org-shell,mongodb-org-mongos,mongodb-org-tools
 post: |
-  Previous versions of MongoDB packages use different naming conventions.
-  See the :v2.4:`2.4 version of documentation for more information
-  </tutorial/install-mongodb-on-linux>`.
+  以前版本的MongoDB安装包使用不同的版本命名规则。详情请参见 :v2.4:`2.4 版本</tutorial/install-mongodb-on-linux>`.
 ...
