@@ -1,11 +1,11 @@
 git:
   remote:
-    upstream: 'mongodb/docs'
+    upstream: 'tjworks/docs'
     tools: 'mongodb/docs-tools'
 project:
   name: 'manual'
   tag: 'manual'
-  url: 'http://docs.mongodb.org'
+  url: 'http://docs.mongoing.com'
   title: 'MongoDB Manual'
   branched: true
   siteroot: true
