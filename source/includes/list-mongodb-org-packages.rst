@@ -22,7 +22,7 @@ MongoDB提供的安装包：
 
 - ``mongodb-org-tools``
 
-  这个包含下列MongoDB的工具: :program:`mongoimport`
+  这个包含下列MongoDB的工具: :program:`mongoimport`, 
   :program:`bsondump`, :program:`mongodump`, :program:`mongoexport`,
   :program:`mongofiles`, :program:`mongoimport`, :program:`mongooplog`,
   :program:`mongoperf`, :program:`mongorestore`, :program:`mongostat`,

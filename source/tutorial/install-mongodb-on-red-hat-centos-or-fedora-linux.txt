@@ -20,9 +20,9 @@ Red Hat Enterprise, CentOS, Fedora, 以及 Amazon Linux 上的安装
 
 .. warning::
 
-   Fedora 15 引入了 ``systemd`` 功能, 由此引起的是MongoDB官方包里自带的启动脚本
-   会无法在Fedora系统上正确运行。这个问题有望在未来版本解决， 详见 :issue:`SERVER-7285`。 
-   在次之前你可以使用你自己的启动脚本 *或者* 使用一种通用Linux安装方式，详见 :doc:`/tutorial/install-mongodb-on-linux`。
+   Fedora 15 引入了 ``systemd`` 功能, 这个导致MongoDB官方包里自带的启动脚本
+   无法在Fedora系统上正确运行。这个问题有望在未来版本解决， 详见 :issue:`SERVER-7285`。 
+   在此之前你可以使用你自己的启动脚本 *或者* 使用通用的Linux安装方式，详见 :doc:`/tutorial/install-mongodb-on-linux`。
 
 注意事项
 --------------
