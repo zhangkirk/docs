@@ -99,18 +99,18 @@ msgstr ""
 
 #: ../source/includes/toc/table-aggregation-pipeline.rst:23
 msgid ":pipeline:`$limit`"
-msgstr ""
+msgstr "管道操作符:`$limit`"
 
 #: ../source/includes/toc/table-aggregation-pipeline.rst:23
 msgid ""
 "Passes the first *n* documents unmodified to the pipeline where *n* is the "
 "specified limit. For each input document, outputs either one document (for "
 "the first *n* documents) or zero documents (after the first *n* documents)."
-msgstr ""
+msgstr "通过n指定的限制返回一个文档的管道,对于每个输入文档,输出一个文档(第n文件)或零文档(在第一次n文档)。"
 
 #: ../source/includes/toc/table-aggregation-pipeline.rst:29
 msgid ":pipeline:`$skip`"
-msgstr ""
+msgstr "管道操作符:`$skip`"
 
 #: ../source/includes/toc/table-aggregation-pipeline.rst:29
 msgid ""
