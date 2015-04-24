@@ -118,7 +118,7 @@ msgid ""
 "passes the remaining documents unmodified to the pipeline. For each input "
 "document, outputs either zero documents (for the first *n* documents) or one"
 " document (if after the first *n* documents)."
-msgstr ""
+msgstr "skip接收一个数字n,丢弃结果集中前n个文档，将剩余文档作为结果返回。对于每个输入文档,输出零文档(第一次n文档)或一个文档(如果在第一次之后n文档)。"
 
 #: ../source/includes/toc/table-aggregation-pipeline.rst:35
 msgid ":pipeline:`$unwind`"
