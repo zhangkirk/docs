@@ -443,68 +443,68 @@ msgstr ""
 
 #: ../source/includes/toc/table-aggregation-comparison.rst:4
 msgid ":expression:`$cmp`"
-msgstr ""
+msgstr "表达式:`$cmp`"
 
 #: ../source/includes/toc/table-aggregation-comparison.rst:4
 msgid ""
 "Returns: ``0`` if the two values are equivalent, ``1`` if the first value is"
 " greater than the second, and ``-1`` if the first value is less than the "
 "second."
-msgstr ""
+msgstr "返回:0,如果两个值是等价的,如果第一个值大于第二个,和1如果第一个值小于第二个。"
 
 #: ../source/includes/toc/table-aggregation-comparison.rst:10
 msgid ":expression:`$eq`"
-msgstr ""
+msgstr "表达式:`$eq`"
 
 #: ../source/includes/toc/table-aggregation-comparison.rst:10
 msgid "Returns ``true`` if the values are equivalent."
-msgstr ""
+msgstr "返回``true``如果值是等价的"
 
 #: ../source/includes/toc/table-aggregation-comparison.rst:14
 msgid ":expression:`$gt`"
-msgstr ""
+msgstr "表达式:`$gt`"
 
 #: ../source/includes/toc/table-aggregation-comparison.rst:14
 msgid "Returns ``true`` if the first value is greater than the second."
-msgstr ""
+msgstr "返回``true`` 如果第一个值大于第二个"
 
 #: ../source/includes/toc/table-aggregation-comparison.rst:18
 msgid ":expression:`$gte`"
-msgstr ""
+msgstr "表达式:`$gte`"
 
 #: ../source/includes/toc/table-aggregation-comparison.rst:18
 msgid ""
 "Returns ``true`` if the first value is greater than or equal to the second."
-msgstr ""
+msgstr "Returns ``true`` 如果第一个值是大于或等于第二个。 "
 
 #: ../source/includes/toc/table-aggregation-comparison.rst:22
 msgid ":expression:`$lt`"
-msgstr ""
+msgstr "表达式:`$lt`"
 
 #: ../source/includes/toc/table-aggregation-comparison.rst:22
 msgid "Returns ``true`` if the first value is less than the second."
-msgstr ""
+msgstr "返回 ``true`` 如果第一个值小于第二个。"
 
 #: ../source/includes/toc/table-aggregation-comparison.rst:26
 msgid ":expression:`$lte`"
-msgstr ""
+msgstr "表达式:`$lte`"
 
 #: ../source/includes/toc/table-aggregation-comparison.rst:26
 msgid ""
 "Returns ``true`` if the first value is less than or equal to the second."
-msgstr ""
+msgstr "返回``true`` 如果第一个值是小于或等于第二个。"
 
 #: ../source/includes/toc/table-aggregation-comparison.rst:30
 msgid ":expression:`$ne`"
-msgstr ""
+msgstr "表达式:`$ne`"
 
 #: ../source/includes/toc/table-aggregation-comparison.rst:30
 msgid "Returns ``true`` if the values are *not* equivalent."
-msgstr ""
+msgstr "返回``true`` 如果值不是等价的。 "
 
 #: ../source/meta/aggregation-quick-reference.txt:117
 msgid "Arithmetic Expressions"
-msgstr ""
+msgstr "算术表达式"
 
 #: ../source/includes/intro-aggregation-arithmetic.rst:1
 msgid ""
